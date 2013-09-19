@@ -44,7 +44,7 @@ Respirator.prototype.watchKey = function(key){
 };
 
 Respirator.prototype.unwatchKey = function(key){
-    if(!this.watchedKeys.contains(key)){
+    if(this.watchedKeys.contains(key)){
         this.log.verbose(util.format("Unwatching key: %s", key));
         this.watchedKeys.remove(key);
     }
